@@ -1,0 +1,27 @@
+<system>
+	<group name= "user management">
+		<option name= "add user">
+			<command>sudo adduser</command>
+		</option>
+		<option name= "delete user">
+			<command>sudo deluser</command>
+		</option>
+		<option name= "lock user">
+			<command>sudo passwd -l</command>
+		</option>
+		<option name= "unlock user">
+			<command>sudo passwd -u</command>
+		</option>
+		<option name= "view user status">
+			<command>sudo chage -l</command>
+		</option>
+	</group>
+	<group name= "restart services">
+		<service name= "ssh">
+			<command>sudo systemctl restart ssh</command>
+		</service>
+		<service name= "samba">
+			<command>sudo systemctl restart smbd.service nmbd.service</command>
+		</service>
+	</group>
+</system>

@@ -1,0 +1,124 @@
+<software>
+	<program name="test">
+		<name>test</name>
+		<option name="port number">
+			<filepath>/home/pi/pap/test</filepath>
+			<default>22</default>
+			<output>Listen port number</output>
+			<pretext>Port</pretext>
+		</option>
+		<option name="permit root login">
+			<filepath>/home/pi/pap/test</filepath>
+			<default>no</default>
+			<output>Do you want to allow root login?</output>
+			<pretext>PermitRootLogin</pretext>
+		</option>
+		<option name="Public Key Auth">
+			<filepath>/home/pi/pap/test</filepath>
+			<default>no</default>
+			<output>Do you want to allow public key authentication?</output>
+			<pretext>PubkeyAuthentication</pretext>
+		</option>
+		<option name="Password Auth">
+			<filepath>/home/pi/pap/test</filepath>
+			<default>yes</default>
+			<output>Do you want to allow password auth?</output>
+			<pretext>PasswordAuthentication</pretext>
+		</option>
+	</program>
+	<program name="openssh">
+		<name>openssh</name>
+		<package>openssh-server</package>
+		<suite>remote admin</suite>
+		<option name="port number">
+			<filepath>/etc/ssh/sshd_config</filepath>
+			<default>22</default>
+			<output>Listen port number</output>
+			<pretext>Port</pretext>
+		</option>
+		<option name="permit root login">
+			<filepath>/etc/ssh/sshd_config</filepath>
+			<default>no</default>
+			<output>Do you want to allow root login?</output>
+			<pretext>PermitRootLogin</pretext>
+		</option>
+		<option name="Public Key Auth">
+			<filepath>/etc/ssh/sshd_config</filepath>
+			<default>no</default>
+			<output>Do you want to allow public key authentication?</output>
+			<pretext>PubkeyAuthentication</pretext>
+		</option>
+		<option name="Password Auth">
+			<filepath>/etc/ssh/sshd_config</filepath>
+			<default>yes</default>
+			<output>Do you want to allow password auth?</output>
+			<pretext>PasswordAuthentication</pretext>
+		</option>
+		<option name="Password Auth">
+			<filepath>/etc/ssh/sshd_config</filepath>
+			<default>yes</default>
+			<output>Do you want to allow password auth?</output>
+			<pretext>PasswordAuthentication</pretext>
+		</option>
+	</program>
+	<program name="samba">
+		<name>samba</name>
+		<package>samba</package>
+		<suite>file server</suite>
+		<option name="server name">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>server</default>
+			<output>Server name (surrond with [])</output>
+			<pretext>[</pretext>
+			<posttext>]</posttext>
+		</option>
+		<option name="server path">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>/home/share</default>
+			<output>Server path</output>
+			<pretext>path =</pretext>
+		</option>
+		<option name="allow guest">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>no</default>
+			<output>Allow guests: </output>
+			<pretext>guest ok =</pretext>
+		</option>
+		<option name="read only">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>no</default>
+			<output>Read only</output>
+			<pretext>read only =</pretext>
+		</option>
+		<option name="comment">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>samba comment</default>
+			<output>Comment: </output>
+			<pretext>comment</pretext>
+		</option>
+		<option name="browseable">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>yes</default>
+			<output>Should server be browesable: </output>
+			<pretext>browseable =</pretext>
+		</option>
+		<option name="read only">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>no</default>
+			<output>Make server read only: </output>
+			<pretext>read only = </pretext>
+		</option>
+		<option name="browseable">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>yes</default>
+			<output>Should server be browesable: </output>
+			<pretext>browseable =</pretext>
+		</option>
+		<option name="valid users">
+			<filepath>/etc/samba/smb.conf</filepath>
+			<default>%S</default>
+			<output>Which users should be allowed: </output>
+			<pretext>valid users = </pretext>
+		</option>
+	</program>
+</software>
